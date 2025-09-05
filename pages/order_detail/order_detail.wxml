@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="order-info">
+    <view class="order-id">订单号：{{order.id}}</view>
+    <view class="order-status">状态：{{order.status}}</view>
+    <view class="order-amount">金额：￥{{order.total}}</view>
+  </view>
+</view>

@@ -1,0 +1,136 @@
+/* goods_detail.wxss */
+.container {
+  padding: 20px;
+  padding-bottom: 120rpx;
+}
+
+.goods-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.goods-info {
+  margin-bottom: 20px;
+}
+
+.goods-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.goods-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  background: #Ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.add-to-cart-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.modal-content {
+  width: 100%;
+  background: #Fff;
+  padding: 30rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.modal-row {
+  width: 100%;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border-radius: 40rpx;
+  padding: 10rpx;
+}
+
+.quantity-btn {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  font-size: 40rpx;
+  padding: 0;
+  background-color: #Fff;
+  border: 1rpx solid #ddd;
+}
+
+.quantity {
+  min-width: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  margin: 0 20rpx;
+}
+
+.confirm-btn {
+  position: fixed;
+  right: 30rpx;
+  background: #61D5D6;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  flex-shrink: 0;
+}
+
+.confirm-btn::after {
+  border: none;
+}
+
+.buy-btn {
+  background: #61D5D6;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0;
+}
+
+.buy-btn::after {
+  border: none;
+}
+
+.price {
+  font-size: 36rpx;
+  color: #Ff5000;
+  font-weight: bold;
+}

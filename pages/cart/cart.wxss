@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-goods{
+  text-align: center;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+/* 购物车商品容器 */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background: #Fff;
+  border-bottom: 1rpx solid #F4f4f4;
+}
+
+/* 单选按钮容器 */
+.radio-wrapper {
+  padding: 20rpx;
+  margin-right: 20rpx;
+}
+
+/* 商品图片样式 */
+.cart-item-image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+}
+
+/* 右侧信息容器 */
+.cart-item-info {
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 商品名称样式 */
+.cart-item-name {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 底部操作区 */
+.bottom-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+/* 价格样式 */
+.cart-item-price {
+  font-size: 32rpx;
+  color: #F44;
+}
+
+/* 数量操作容器 */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+/* 数量按钮 */
+.quantity-btn {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 35rpx;
+  text-align: center;
+  border-radius: 50%;
+  border: 1rpx solid #ddd;
+  font-size: 40rpx;
+  padding: 0;
+  background: #Fff;
+}
+
+/* 数量显示 */
+.quantity {
+  min-width: 25rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+  margin-left: 20rpx;
+  padding: 0 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #Fff;
+  background: #F44;
+  border-radius: 25rpx;
+  border: none;
+}
+
+.delete-btn::after {
+  border: none;
+}
+
+/* 调整数量操作区布局 */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* 底部固定栏样式 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background: #Ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+}
+
+.total-text {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.total-price {
+  font-size: 36rpx;
+  color: #F44;
+  font-weight: 600;
+}
+
+.buy-btn {
+  background: #61D5D6;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0;
+}
+
+.buy-btn::after {
+  border: none;
+}
+
+/* 防止内容被底部栏遮挡 */
+.cart-container {
+  padding-bottom: 120rpx;
+}

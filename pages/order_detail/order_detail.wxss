@@ -1,0 +1,10 @@
+.container {
+  padding: 20px;
+}
+.order-info {
+  margin-bottom: 20px;
+}
+.order-id, .order-status, .order-amount {
+  margin-bottom: 10px;
+  font-size: 16px;
+}

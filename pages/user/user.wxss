@@ -1,0 +1,111 @@
+/* 头像背景区域 */
+.iconbg {
+  position: relative;
+  width: 100%;
+}
+
+/* 登录按钮样式 */
+.loginBtn {
+  margin-top: 200rpx;
+  margin-bottom: 100rpx;
+  color: white;
+  background-color: #61D5D6;
+}
+
+/* 渐变背景 */
+.bg {
+  background: linear-gradient(to bottom, #61D5D6, white);
+  padding: 200rpx;
+}
+
+/* 用户头像区域 */
+.user_icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+}
+
+.user_icon image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+}
+
+.user_icon .username {
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+/* 我的订单区域 */
+.myorder {
+  margin-top: 50rpx;
+  background-color: #fff;
+  width: 90%;
+  margin-left: 20rpx;
+  border-radius: 10rpx; /* 添加圆角 */
+  padding: 20rpx; /* 增加内边距 */
+}
+
+.myorder .myorder_title {
+  border-bottom: 1px solid #999;
+  padding: 20rpx 0; /* 调整内边距 */
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 修复子项宽度不一致问题 */
+.myorder .myorder_item {
+  display: flex;
+  justify-content: space-between; /* 均匀分布 */
+  padding: 20rpx 0; /* 增加上下内边距 */
+}
+
+.myorder .myorder_item .item {
+  flex: 1; /* 关键代码：强制等分 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* 包含 padding */
+}
+
+/* 强制图片尺寸统一 */
+.myorder .myorder_item .item image {
+  width: 35px !important;
+  height: 35px !important;
+  object-fit: contain; /* 防止图片变形 */
+}
+
+/* 文字样式 */
+.item_name {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  word-break: break-word; /* 允许长单词换行 */
+  text-align: center; /* 保持居中 */
+}
+
+/* 工具列表 */
+.mytools {
+  background-color: #fff;
+  width: 90%;
+  margin-left: 35rpx;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+}
+
+.tools_item {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #999;
+  padding: 24rpx; /* 统一内边距 */
+}
+
+/* 退出按钮 */
+.logout_btn {
+  margin: 40rpx auto;
+  background-color: #61D5D6;
+  color: white;
+  border-radius: 30rpx;
+  width: 50%;
+}

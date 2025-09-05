@@ -1,0 +1,39 @@
+<!-- 头像、背景图 -->
+<view class="iconbg">
+  <view class="bg"></view>
+  <view class="user_icon">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="username">{{userInfo.username}}</view>
+  </view>
+</view>
+
+<!-- 我的订单 -->
+<view class="myorder">
+  <view class="myorder_title">{{texts['我的订单']}}</view>
+  <view class="myorder_item">
+    <view class="item" bindtap="navigateToOrder">
+      <image src="/icons/order.png" style="height: 35px; width: 35px;"/>
+      <view class="item_name">{{texts['全部订单']}}</view>
+    </view>
+    <view class="item" bindtap="navigateToOrder">
+      <image src="/icons/pay.png" style="height: 35px; width: 35px;"/>
+      <view class="item_name">{{texts['待付款']}}</view>
+    </view>
+    <view class="item" bindtap="navigateToOrder">
+      <image src="/icons/delivery.png" style="height: 35px; width: 35px;"/>
+      <view class="item_name">{{texts['待出行/发货']}}</view>
+    </view>
+    <view class="item" bindtap="navigateToOrder">
+      <image src="/icons/refund.png" style="height: 35px; width: 35px;"/>
+      <view class="item_name">{{texts['退款/退货']}}</view>
+    </view>
+  </view>
+</view>
+<!-- 管理 -->
+<view class="mytools">
+  <view class="tools_item" bindtap="navigateToInfo">{{texts['系统设置']}}</view>
+  <view class="tools_item">{{texts['联系客服']}}</view>
+  <view class="tools_item">{{texts['意见反馈']}}</view>
+  <view class="tools_item">{{texts['关于我们']}}</view>
+</view>
+<button class="logout_btn" bindtap="handleLogout">{{texts['退出登录']}}</button>

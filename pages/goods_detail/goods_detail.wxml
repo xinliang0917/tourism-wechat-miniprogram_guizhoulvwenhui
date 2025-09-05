@@ -1,0 +1,27 @@
+<!-- goods_detail.wxml -->
+<view class="container">
+  <image class="goods-image" src="{{goodsInfo.image}}" mode="aspectFit" />
+  <view class="goods-info">
+    <text class="goods-title">{{goodsInfo.title}}</text>
+  </view>
+  <text class="goods-desc">{{goodsInfo.desc}}</text>
+  <view class="footer">
+    <text class="price">￥{{goodsInfo.price}}</text>
+    <button class="buy-btn" bindtap="showAddToCartModal">加入购物车</button>
+  </view>
+  
+   <view class="add-to-cart-modal" hidden="{{!showAddToCartModal}}">
+    <view class="modal-content">
+      <view class="modal-row">
+        <view class="quantity-container">
+          <view class="quantity-control">
+            <button class="quantity-btn" bindtap="decreaseQuantity">-</button>
+            <text class="quantity">{{quantityOptions[selectedQuantityIndex]}}</text>
+            <button class="quantity-btn" bindtap="increaseQuantity">+</button>
+          </view>
+          <button class="confirm-btn" bindtap="handleAddToCart">确认添加</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

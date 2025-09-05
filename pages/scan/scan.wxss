@@ -1,0 +1,41 @@
+/* pages/scan/scan.wxss */
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-layer {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: grey;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.status-bar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #Fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-size: 16px;
+}

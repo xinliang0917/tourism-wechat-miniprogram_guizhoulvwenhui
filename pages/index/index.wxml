@@ -1,0 +1,80 @@
+<!-- index.wxml -->
+<view class="bg-container">
+  <image class="bg-image" src="/images/bg.jpg" mode="aspectFit" style="width: 750rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+<view class="container">
+  <!-- 自定义搜索栏 -->
+  <view class="search-bar">
+        <view class="iconfont icon-search_light"></view>
+        <input class="search-input" placeholder="请输入搜索关键词" bindtap="navigateToSearch" />
+  </view>
+
+  <!-- 自动滚动swiper -->
+  <swiper autoplay interval="3000">
+    <swiper-item>
+      <image style="width: 675rpx; display: inline-block; box-sizing: border-box" src="/images/swiper1.jpg" mode="aspectFill" />
+    </swiper-item>
+    <swiper-item>
+      <image style="width: 675rpx; display: inline-block; box-sizing: border-box" src="/images/swiper2.jpg" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+
+  <!-- 旅游产品瀑布流 -->
+  <view class="section-title">
+  <text>旅游产品</text>
+  <text class="more-link">更多>></text>
+</view>
+  <view class="waterfall">
+    <view class="column">
+      <block wx:for="{{leftList1}}" wx:key="index">
+        <view class="item" bindtap="navigateToDetail" data-id="{{item.id}}">
+          <image src="{{item.image}}" style="height: 100px;" mode="aspectFill" />
+          <view class="info">
+            <text class="title">{{item.title}}</text>
+            <text class="price">￥{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="column">
+      <block wx:for="{{rightList1}}" wx:key="index">
+        <view class="item" bindtap="navigateToDetail" data-id="{{item.id}}">
+          <image src="{{item.image}}" style="height: 100px;"  mode="aspectFill" />
+          <view class="info">
+            <text class="title">{{item.title}}</text>
+            <text class="price">￥{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+<!-- 文创周边瀑布流 -->
+  <view class="section-title">
+    <text>文创周边</text>
+    <text class="more-link">更多>></text>
+  </view>
+  <view class="waterfall">
+    <view class="column">
+      <block wx:for="{{leftList2}}" wx:key="index">
+        <view class="item" bindtap="navigateToDetail" data-id="{{item.id}}">
+          <image src="{{item.image}}" style="height: 100px;"  mode="aspectFill" />
+          <view class="info">
+            <text class="title">{{item.title}}</text>
+            <text class="price">￥{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="column">
+      <block wx:for="{{rightList2}}" wx:key="index">
+        <view class="item" bindtap="navigateToDetail" data-id="{{item.id}}">
+          <image src="{{item.image}}" style="height: 100px;" mode="aspectFill" />
+          <view class="info">
+            <text class="title">{{item.title}}</text>
+            <text class="price">￥{{item.price}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

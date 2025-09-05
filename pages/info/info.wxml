@@ -1,0 +1,49 @@
+<view class="container" style="height: 1458rpx; display: block; box-sizing: border-box">
+  <form bindsubmit="saveInfo">
+    <view class="info-item">
+      <view class="info-label">头像</view>
+      <view class="info-content">
+        <image bindtap="chooseAvatar" src="{{avatar}}" mode="aspectFill" />
+      </view>
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">用户名</view>
+      <input class="info-content" name="username" value="{{username}}" placeholder="请输入用户名" />
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">收货地址</view>
+      <input class="info-content" name="address" value="{{address}}" placeholder="请输入收货地址" />
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">收货人</view>
+      <input class="info-content" name="receiver" value="{{receiver}}" placeholder="请输入收货人" />
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">联系方式</view>
+      <input class="info-content" name="phone" value="{{phone}}" placeholder="请输入联系方式" />
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">密码</view>
+      <view class="info-content">********</view>
+    </view>
+    <view class="divider"></view>
+    <view class="info-item">
+      <view class="info-label">语言</view>
+      <picker 
+    mode="selector" 
+    range="{{languageList}}" 
+    value="{{languageList.indexOf(selectedLang)}}"
+    bindchange="bindPickerChange"
+  >
+        <view class="info-content">{{selectedLang}}</view>
+      </picker>
+    </view>
+    <view class="divider"></view>
+    <button formType="submit">保存</button>
+  </form>
+</view>

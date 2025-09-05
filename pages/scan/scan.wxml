@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- 全屏摄像头 -->
+  <camera 
+    device-position="back" 
+    flash="off" 
+    style="width: 100%; height: 100vh;"
+  ></camera>
+
+  <!-- 视频叠加层 -->
+  <view class="video-layer" wx:if="{{videoUrl}}">
+    <video 
+      src="{{videoUrl}}" 
+      autoplay
+      controls
+      bindended="onVideoEnd"
+      style="width: 100%; height: 300rpx;"
+    ></video>
+    <view class="close-btn" bindtap="closeVideo">×</view>
+  </view>
+
+</view>

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/scan/scan",
+    "pages/user/user",
+    "pages/goods_detail/goods_detail",
+    "pages/order/order",
+    "pages/order_detail/order_detail",
+    "pages/search/search",
+    "pages/info/info"
+  ],
+  "window": {
+    "navigationStyle": "default",
+  "navigationBarBackgroundColor": "#61D5D6"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart_selected.png"
+      },
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "扫描",
+        "iconPath": "icons/scan.png",
+        "selectedIconPath": "icons/scan_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user_selected.png"
+      }
+    ]
+  },
+  "cloud": true,
+  "useNpm": true,
+  "permission": {
+    "scope.camera": {
+      "desc": "需要摄像头权限进行扫描"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- 订单类型切换 -->
+  <view class="order-type-tabs">
+    <text class="tab-item {{currentType === 'all' ? 'active' : ''}}" bindtap="switchType" data-type="all">全部</text>
+    <text class="tab-item {{currentType === 'unpaid' ? 'active' : ''}}" bindtap="switchType" data-type="unpaid">待付款</text>
+    <text class="tab-item {{currentType === 'shipped' ? 'active' : ''}}" bindtap="switchType" data-type="shipped">待发货</text>
+    <text class="tab-item {{currentType === 'received' ? 'active' : ''}}" bindtap="switchType" data-type="received">待收货</text>
+  </view>
+
+  <!-- 订单列表 -->
+  <view class="no-orders" wx:if="{{filteredOrders.length === 0}}">
+    暂无订单
+  </view>
+  <view class="order-item" wx:for="{{filteredOrders}}" wx:key="id">
+    <view class="order-header">
+        <view class="order-date">{{item.date}}</view>
+        <view class="order-id">订单号：{{item.id}}</view>
+      </view>
+    <view class="order-content" style="display: flex; height: 235rpx; box-sizing: border-box">
+      <!-- 左侧商品图片 -->
+      <view class="goods-list" style="flex: 1;">
+          <image class="goods-image" src="{{item.image}}" mode="aspectFill"></image>
+      </view>
+
+      <!-- 右侧信息 -->
+      <view class="order-right" style="flex: 1;">
+        <!-- 订单状态 -->
+        <view class="order-info">
+          <view class="goods-name">{{item.name}}</view>
+          <view class="order-status">{{item.status}}</view>
+        </view>
+
+        <!-- 商品数量和金额 -->
+        <view class="order-summary">
+          <text class="total-price">金额：￥{{item.total}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="order-actions">
+      <button wx:if="{{item.status === '待付款'}}" class="action-btn" bindtap="payOrder" data-id="{{item.id}}">立即支付</button>
+      <button wx:if="{{item.status === '待收货'}}" class="action-btn" bindtap="confirmReceipt" data-id="{{item.id}}">确认收货</button>
+    </view>
+  </view>
+</view>

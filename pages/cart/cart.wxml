@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="no-goods" wx:if="{{cartList.length === 0}}">
+      暂无商品
+    </view>
+    <view class="cart-item" wx:for="{{cartList}}" wx:key="id">
+  <!-- 左侧选择按钮 -->
+  <view class="radio-wrapper" bindtap="toggleCheck" data-index="{{index}}">
+    <radio class="radio" color="#09bb07" checked="{{item.checked}}"></radio>
+  </view>
+  
+  <!-- 商品图片 -->
+  <image class="cart-item-image" src="{{item.image}}"></image>
+
+  <!-- 右侧商品信息 -->
+  <view class="cart-item-info">
+    <!-- 商品名称（上方） -->
+    <text class="cart-item-name">{{item.name}}</text>
+    
+    <!-- 底部价格和操作区 -->
+    <view class="bottom-area">
+      <!-- 价格（左侧） -->
+      <text class="cart-item-price">￥{{item.price}}</text>
+      
+      <!-- 数量操作（右侧） -->
+      <view class="cart-item-quantity">
+        <button class="quantity-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+        <text class="quantity">{{item.quantity}}</text>
+        <button class="quantity-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+        <!-- 新增删除按钮 -->
+        <button class="delete-btn" bindtap="deleteItem" data-index="{{index}}">删除</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="total">
+    <text class="total-text">合计：</text>
+    <text class="total-price">￥{{totalPrice}}</text>
+  </view>
+  <button class="buy-btn" bindtap="buyNow">立即购买</button>
+</view>
+</view>

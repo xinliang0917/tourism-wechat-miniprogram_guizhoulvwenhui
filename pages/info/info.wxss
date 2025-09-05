@@ -1,0 +1,36 @@
+.container {
+  padding: 20px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+.info-label {
+  width: 100px;
+  color: #666;
+  font-size: 16px;
+}
+.info-content {
+  flex: 1;
+  color: #333;
+  font-size: 16px;
+}
+image{
+  height: 100px;
+  width: 100px;
+}
+button {
+  height: 40px;
+  width: 50%;
+  background-color: #51D5D6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 140px;
+}
+.divider {
+  height: 1px;
+  background-color: #eee;
+}
